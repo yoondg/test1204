@@ -1,46 +1,66 @@
 /* Import Local Scss Files */
 @import "variables", "reset", "fonts";
 /* esponsive for Mobile */
-@media (max-width:767px){
+@media (max-width:767px) {
+
   /* #########Common CSS########### */
-  section:not(.front-slider){padding: 35px 10px;}
-  [class*=inner]{width: 100% !important;}
+  section:not(.front-slider) {
+    padding: 35px 10px;
+  }
+
+  [class*=inner] {
+    width: 100% !important;
+  }
+
   /* Header */
-  header{
-    .header-inner{
+  header {
+    .header-inner {
       padding: 0 10px;
-      .logo-search{
-        .logo{
-          img{
-            width: 150px;
+
+      .logo-search {
+        .logo {
+          img {
+            width: 160px;
           }
         }
-        .search{display: none;}
-        .login-register-buttons{
-          button{
-            font-size: 12px;padding: 5px;
+
+        .search {
+          display: none;
+        }
+
+        .login-register-buttons {
+          button {
+            font-size: 12px;
+            padding: 5px;
           }
         }
       }
-      .gnb{
-        .trigger{
-          span{display: none;}
-          &::before{
+
+      .gnb {
+        .trigger {
+          span {
+            display: none;
+          }
+
+          &::before {
             background: url('/images/icon-category-search.png');
           }
         }
-        .special-navi{
+
+        .special-navi {
           white-space: nowrap;
           overflow-y: hidden;
         }
-        a{
-          &:first-child::after{
+
+        a {
+          &:first-child::after {
             display: none;
           }
         }
       }
     }
-    .mega-navi{
+
+    .mega-navi {
       display: block;
       position: fixed;
       top: 0;
@@ -48,65 +68,81 @@
       width: 300px;
       height: 100vh;
       padding-top: 60px;
-      .search-mobile{
+
+      .search-mobile {
         display: block;
         width: 250px;
         margin: 10px auto;
       }
-      .mega-navi-inner{
+
+      .mega-navi-inner {
         flex-direction: column;
-        .mega-navi-item{
-          &:last-child b{
+
+        .mega-navi-item {
+          &:last-child b {
             border: none;
           }
-          b{
+
+          b {
             border-bottom: 1px solid $dim-gray;
             display: block;
             padding: 5px 15px;
             color: $dark-gray;
-            &::after{
-              content:'\F4FE';
+
+            &::after {
+              content: '\F4FE';
               font-family: 'bootstrap-icons';
               float: right;
               font-size: 17px;
             }
-            &.active{color: $white;}
-            &.active::after{
+
+            &.active {
+              color: $white;
+            }
+
+            &.active::after {
               content: "\f2ea";
               color: $white;
             }
           }
-          .mega-navi-item-wrap{
+
+          .mega-navi-item-wrap {
             display: none;
             padding: 10px 15px;
-            a{
+
+            a {
               font-weight: 300;
             }
           }
         }
       }
-      .btn-mega-navi-close{
+
+      .btn-mega-navi-close {
         display: block;
         position: absolute;
-        border:none;
+        border: none;
         background-color: transparent;
         color: $white;
         top: 15px;
-        left: 15px; font-size: 2em;
+        left: 15px;
+        font-size: 2em;
       }
     }
   }
+
   /* section : Front Slider */
   /* section : Category Shortcut */
-  .category-shortcut{
-    .category-shortcut-inner{
-      .category-shortcut-items{
+  .category-shortcut {
+    .category-shortcut-inner {
+      .category-shortcut-items {
         flex-wrap: wrap;
-        .category-shortcut-item{
+
+        .category-shortcut-item {
           flex-basis: 25%;
           box-shadow: none;
           height: auto;
-          span{
+
+          span {
             font-size: 14px;
             text-align: center;
           }
@@ -114,114 +150,140 @@
       }
     }
   }
+
   /* section : Focus Class  */
   /* section : Best Class */
   /* section : Timer */
   /* section : blog */
-  .blog{
-    .blog-inner{
-      .blog-content{
-        .blog-items{
+  .blog {
+    .blog-inner {
+      .blog-content {
+        .blog-items {
           flex-direction: column;
-          .blog-item{
+
+          .blog-item {
             margin-bottom: 10px;
           }
         }
       }
     }
   }
+
   /* section : Slogan*/
   /* section : tip-tech */
   /* footer */
-  footer{
+  footer {
     padding: 30px 0;
-    .footer-inner{
+
+    .footer-inner {
       padding: 0 20px;
-      .lnb-wrap{
+
+      .lnb-wrap {
         flex-direction: column;
         border: none;
         gap: 50px;
-        .footer-slogan{
+
+        .footer-slogan {
           text-align: center;
           font-size: 1.3em;
           color: $white;
         }
-        .lnb{
+
+        .lnb {
           flex-direction: column;
-          .link-item{
-            .link-item-title{
+
+          .link-item {
+            .link-item-title {
               padding: 10px 0;
               border-bottom: 1px solid $silver-black;
               pointer-events: all;
-              &::after{
+
+              &::after {
                 content: '▽';
                 font-family: $primary-kr;
                 float: right;
               }
-              &.active::after{
+
+              &.active::after {
                 transform: rotateX(180deg);
               }
             }
-            .link-item-content{
+
+            .link-item-content {
               padding: 5px 0;
               display: none;
-              a{
+
+              a {
                 padding: 3px 0;
               }
             }
           }
         }
       }
-      .copyright-wrap{
+
+      .copyright-wrap {
         flex-direction: column;
         text-align: center;
         padding-top: 10px;
-        .company-info-trigger{
+
+        .company-info-trigger {
           display: block;
           color: $white;
           font-weight: 400;
         }
-        address{
+
+        address {
           display: none;
         }
-        .sns{
+
+        .sns {
           margin-top: 10px;
         }
       }
     }
   }
-  
-/* ########Category Main : category-main.html ###### */
-.category-class{
-  .category-class-inner{
-    .category-class-wrap{
-      overflow-x: hidden;
-    }
-    .category-class-detail{
-      .category-shortcut-btn-group{
-        .btn-shortcut{
-          font-size: 12px;
-          
+
+  /* ########Category Main : category-main.html ###### */
+  .category-class {
+    .category-class-inner {
+      .category-class-wrap {
+        overflow-x: hidden;
+      }
+
+      .category-class-detail {
+        .category-shortcut-btn-group {
+          .btn-shortcut {
+            font-size: 12px;
+
+          }
         }
       }
-    }
 
+    }
   }
-}
+
   /* ######## Class Detail : class-detail.html ######## */
   /* class-detail-image */
-  .class-detail-image{
-    .class-detail-image-inner{
+  .class-detail-image {
+    .class-detail-image-inner {
       height: auto;
       flex-direction: column;
-      padding:30px;
-      .heading{
+      padding: 30px;
+
+      .heading {
         text-align: center;
-        h2{font-size: 20px;}
-        p{font-size: 16px;}
+
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 16px;
+        }
       }
-      .cover-image{
-        img{
+
+      .cover-image {
+        img {
           margin-top: 30px;
           height: 80%;
           width: 100%;
@@ -229,33 +291,40 @@
       }
     }
   }
-  .class-detail-full{
+
+  .class-detail-full {
     padding: 0 !important;
-    .class-detail-full-inner{
-      .class-detail-full-content{
+
+    .class-detail-full-inner {
+      .class-detail-full-content {
         flex-direction: column-reverse;
-        >div{
+
+        >div {
           background-color: $white;
           border-radius: 0;
           box-shadow: none;
           padding: 10px;
         }
-        .class-detail-info{
-          .class-detail-navigation{
+
+        .class-detail-info {
+          .class-detail-navigation {
             overflow-y: hidden;
             gap: 10px;
-            a{
+
+            a {
               font-size: 14px;
               white-space: nowrap;
             }
           }
-          .class-introduce{
-            * img{
+
+          .class-introduce {
+            * img {
               width: 90%;
             }
           }
         }
-        .class-detail-sidebar{
+
+        .class-detail-sidebar {
           position: static;
         }
       }
