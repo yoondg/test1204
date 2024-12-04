@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카운트다운
+  </title>
+  <style>
+    ul{
+      margin: 100px auto;
+      padding:0;
+     width: max-content;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap:10px;
+    }
+    li{
+      font-size: 50px;
+    }
+li:not(.dot){
+  background-color:#000;
+  color:#fff;
+  border-radius: 10px;
+  padding:20px;
+}
+  </style>
+</head>
+<body>
+  <ul>
+    <li>0</li>
+    <li>5</li>
+    <li class="dot">:</li>
+    <li>1</li>
+    <li>2</li>
+    <li class="dot">:</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <script>
+function changeTime(){
+  let now=new Date().getTime()
+   let target=new Date('2024-11-01 16:00:00').getTime()
+  let diff=target-now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(diff / (1000 * 60 * 60))
+  const mins = Math.floor(diff / (1000 * 60))
+  const secs = Math.floor(diff / 1000)
+const d = '0'+(days*10).toString()
+    const h = '0'+(hours - days * 24).toString();
+    const m = '0'+(mins - hours * 60).toString();
+    const s = '0'+(secs - mins * 60).toString();
+    document.querySelector('ul').innerHTML=`
+    <li>${h.slice(h.length-2,h.length)[0]}</li>
+    <li>${h.slice(h.length-2,h.length)[1]}</li>
+    <li class="dot">:</li>
+    <li>${m.slice(m.length-2,m.length)[0]}</li>
+    <li>${m.slice(m.length-2,m.length)[1]}</li>
+    <li class="dot">:</li>
+    <li>${s.slice(s.length-2,s.length)[0]}</li>
+    <li>${s.slice(s.length-2,s.length)[1]}</li>
+    `
+}
+   setInterval(changeTime,1000)
+  </script>
+</body>
+</html>
